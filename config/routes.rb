@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   get "landing/index"
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: "users/sessions",
+    unlocks: "users/unlocks",
+    registrations: "users/registrations",
+    passwords: "users/passwords",
+    confirmations: "users/confirmations"
+  }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   authenticated :user, lambda { |u| u.admin? } do
     namespace :admin do
