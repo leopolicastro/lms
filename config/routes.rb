@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "landing/index"
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   authenticated :user, lambda { |u| u.admin? } do
@@ -16,6 +17,5 @@ Rails.application.routes.draw do
     # get "/dashboard", to: "dashboard#show", as: :user_root
   end
   # Defines the public root path route ("/")
-  # root "landing#index"
-  root "home#index"
+  root "landing#index"
 end

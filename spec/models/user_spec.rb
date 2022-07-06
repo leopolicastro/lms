@@ -39,7 +39,15 @@ RSpec.describe User, type: :model do
     expect(build(:user)).to be_valid
   end
 
-  it "is not valid with invalid attributes" do
+  it "is not valid with with invalid email" do
     expect(build(:user, email: nil)).to_not be_valid
+  end
+
+  it "is not valid with with invalid password" do
+    expect(build(:user, password: nil)).to_not be_valid
+  end
+
+  it "is not valid with with invalid name" do
+    expect(build(:user, name: nil)).to_not be_valid
   end
 end
