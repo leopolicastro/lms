@@ -17,9 +17,9 @@
           </div>
         </div>
       </div>
-      <div class="flex items-center w-40 justify-between">
-        <div><%= link_to "Sign In", new_user_session_path %></div>
-        <div><%= link_to "Sign Up", new_user_registration_path %></div>
+      <div class="flex items-center justify-center w-80">
+        <%= link_to "Sign In", new_user_session_path, class: "border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline w-24 text-center" %>
+        <%= link_to "Sign Up", new_user_registration_path, class: "border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline w-24 text-center" %>
       </div>
     </div>
   </div>
